@@ -22,6 +22,7 @@ public class PruebasController {
     private ProductoService productoService;
     @Autowired
     private CategoriaService categoriaService;
+    
 
     @GetMapping("/listado")
     public String listado(Model model) {
