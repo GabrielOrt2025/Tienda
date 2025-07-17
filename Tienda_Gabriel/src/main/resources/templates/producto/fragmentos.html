@@ -89,6 +89,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <td class="text-center">[[${producto.existencias}]]</td>​
                                             <td class="text-end">[[${#numbers.formatDecimal(producto.precio*producto.existencias, 1, 'DEFAULT', 2, 'DEFAULT')}]]</td>​
              <td  class="text-center" th:text="${producto.activo} ? 'Activa' : 'Inactiva'"/>​
+             <td sec:authorize="hasRole ('ROLE.ADMIN')">
                                             <td>[[${producto.categoria.descripcion}]]</td>​
                                             <td><a th:href="@{/producto/eliminar/}+${producto.idProducto}"​
                                                    class="btn btn-danger">​
