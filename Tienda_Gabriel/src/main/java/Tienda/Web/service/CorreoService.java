@@ -5,9 +5,11 @@
 
 package Tienda.Web.service;
 
-import jakarta.mail.MessagingException;
+import jakarta.mail.MessagingException; //Import que ayuda a que si hay un error al enviar el correo tire un exception 
 
 public interface CorreoService {
+    
+    //mmetodos para enviar un correo en los que se implementa la logica de los mismos en correoServiceImpl
     public void enviarCorreoHtml(
             String para, 
             String asunto, 
